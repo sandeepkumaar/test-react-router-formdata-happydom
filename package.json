@@ -1,0 +1,25 @@
+{
+  "name": "bug-happydom-react-router-formdata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.jsx",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test tape -r ./esbuild-register.js 'test.jsx'"
+  },
+  "keywords": [
+  ],
+  "author": "sandeepkumaar.c",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.15.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "esbuild-register": "^3.4.2",
+    "tape": "^5.6.6"
+  }
+}

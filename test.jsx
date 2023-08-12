@@ -10,7 +10,7 @@ async function action({request}) {
   console.log('action called');
   let formData = await request.formData();
   let formObj = Object.fromEntries(formData);
-  console.log('form submit', formObj);
+  console.log('form submit', formObj); // <---- empty object {}
   let { id } = formObj;
   return redirect(`/contacts/${id}`);
 };
@@ -27,8 +27,7 @@ function App() {
 };
 
 
-
-test('<QuizForm/> submit', async assert => {
+test('<AppForm/> submit', async assert => {
 
   let routes = [
         {
@@ -42,7 +41,6 @@ test('<QuizForm/> submit', async assert => {
         },
   ];
   const { screen, user } = domRenderWithRouterProvider(routes, assert.teardown);
-  let searchInput = await screen.getByDisplayValue('5');
   let submitBtn = await screen.getByText('Start');
   await user.click(submitBtn);
   let locationEl = await waitFor(async () => screen.getByTestId('location-display'));
